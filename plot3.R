@@ -9,6 +9,9 @@ with(df, plot(Sub_metering_1,
               col = "black", ylim = c(0, 25), xaxt = "n"))
 lines(df$Sub_metering_2, col="red")
 lines(df$Sub_metering_3, col="blue")
-legend(1875, 26, lwd = 2, legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"),  col = c("black", "red", "blue"))
+# legend(1875, 26, lwd = 2, legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"),  col = c("black", "red", "blue"))
+legend("topright", lwd = 2,
+       legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"),
+       col = c("black", "red", "blue"))
 axis(1, at=c(1, 1440, 2880), labels=c('Thu', 'Fri', 'Sat'))
 dev.off()
