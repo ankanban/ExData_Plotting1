@@ -3,7 +3,7 @@ colNames <- names(initial)
 df <- read.table("household_power_consumption.txt", sep = ";", col.names = colNames,
                  skip = 21997, nrows = 2880)
 df$Date <- as.Date(df$Date, format = "%d/%m/%Y")
-png(filename = 'figure/plot3.png', height = 480, width = 480, units = "px", bg = "white")
+png(filename = 'plot3.png', height = 480, width = 480, units = "px", bg = "white")
 with(df, plot(Sub_metering_1,
               type="l", xlab = "", ylab="Energy sub metering",
               col = "black", ylim = c(0, 25), xaxt = "n"))
